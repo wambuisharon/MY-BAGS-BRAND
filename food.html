@@ -1,4 +1,140 @@
-dcbgvvvhy5gggggggggggggggggggggggggggggggggggggggggggggggggg
-fjyfzccfdvvssssssssssss
-gjumhgdfdcfvtygrfdsdfghjuytrdexc
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food styling · inline · internal · external</title>
+    <!-- External CSS (Paragraph3, Highlight3, Building3) -->
+    <link rel="stylesheet" href="style-food.css">
+    <!-- Internal CSS starts here -->
+    <style>
+        /* Internal styles for Paragraph2, Highlight2, Building2 */
+        .internal-p {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .internal-highlight2 {
+            color: #2e7d32; /* deep green */
+        }
+
+        .internal-building2 {
+            color: #b85e00; /* warm orange-brown */
+        }
+
+        /* optional extra: make demo tidy */
+        .food-section {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            max-width: 900px;
+            margin: 1rem auto;
+            padding: 1.5rem;
+            background: #fef9f0;
+            border-radius: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        img.food-img {
+            border-radius: 20px;
+            object-fit: cover;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        img.food-img:hover {
+            transform: scale(1.02);
+        }
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2rem 0 1rem;
+            justify-content: center;
+        }
+        hr {
+            border: 1px dashed #f0c48b;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="food-section">
+        <!-- 1.2.5 (quiet nod to the original header) -->
+        <h1 style="font-size: 2rem; color: #4b2e1b; border-left: 6px solid #e67e22; padding-left: 1rem;">🍽️ 1.2.5 · food & styling</h1>
+
+        <!-- THREE PARAGRAPHS with different css -->
+        <p style="color: blue; font-style: italic; font-size: 1.2rem;">
+            🍕 <strong>Paragraph 1 (inline blue italics):</strong> Margherita pizza, with fresh basil and mozzarella, 
+            tastes like summer in Naples. The dough is hand-tossed and wood‑fired.
+        </p>
+
+        <p class="internal-p">
+            🍔 <strong>Paragraph 2 (internal orange bold):</strong> A classic cheeseburger – juicy beef patty, melted cheddar, 
+            crisp lettuce, and secret sauce on a brioche bun. Served with golden fries.
+        </p>
+
+        <p class="external-p">
+            🍣 <strong>Paragraph 3 (external purple underline):</strong> Sushi rolls: nori, seasoned rice, fresh salmon, avocado, 
+            and a touch of wasabi. Perfect with soy sauce and pickled ginger.
+        </p>
+
+        <!-- IMAGE ROW (visible food images) -->
+        <div class="image-row">
+            <img class="food-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=220&h=160&fit=crop" alt="pizza margherita" width="220" height="160">
+            <img class="food-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=220&h=160&fit=crop" alt="cheeseburger with fries" width="220" height="160">
+            <img class="food-img" src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=220&h=160&fit=crop" alt="fresh sushi rolls" width="220" height="160">
+        </div>
+
+        <hr>
+
+        <!-- HIGHLIGHTS (three levels with colour) -->
+        <h1 style="color: #c44536; font-size: 2rem;">✨ Highlight1 · inline colour (terracotta)</h1>
+        <h2 class="internal-highlight2">🌟 Highlight2 · internal colour (forest green)</h2>
+        <h3 class="external-highlight3">🔥 Highlight3 · external colour (deep plum)</h3>
+
+        <hr>
+
+        <!-- BUILDINGS (three h3 with colour) -->
+        <h3 style="color: #1177bb;">🏛️ Building1 · inline colour (sky blue)</h3>
+        <h3 class="internal-building2">🏨 Building2 · internal colour (warm copper)</h3>
+        <h3 class="external-building3">🏪 Building3 · external colour (violet)</h3>
+
+        <!-- tiny footnote: external css file linked -->
+        <p style="margin-top: 2rem; font-size: 0.85rem; color: #7f6e5b; border-top: 1px solid #edd6b0; padding-top: 0.8rem;">
+            ⚡ External stylesheet: <code>style-food.css</code> (purple underline for paragraph, plum for highlight3, violet for building3)
+        </p>
+    </div>
+
+    <!-- ========== External CSS content (style-food.css) ========== -->
+    <!--
+        Save the following block as "style-food.css" in the same folder:
+
+        /* style-food.css – external rules for Paragraph3, Highlight3, Building3 */
+        .external-p {
+            color: purple;
+            text-decoration: underline;
+            font-size: 1.2rem;
+        }
+
+        .external-highlight3 {
+            color: #6a1b9a;  /* deep plum */
+            font-size: 1.75rem;
+            margin: 0.5rem 0;
+        }
+
+        .external-building3 {
+            color: #8a4fff;  /* bright violet */
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        /* just a tiny extra: all external elements keep a clean look */
+        .external-p, .external-highlight3, .external-building3 {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+    -->
+    <!-- For convenience, if you run this HTML without separate CSS,
+         the external styles won't apply. But the file is meant to be linked.
+         Below is a fallback demonstration – but we rely on the actual external file.
+    -->
+</body>
+</html>
 
