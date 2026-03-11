@@ -1,0 +1,128 @@
+/* Base styles for all headings (optional but good practice) */
+h1, h2, h3, h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Specific styles using IDs and classes as required */
+
+/* Main heading ID */
+#main-heading {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+    font-size: 2.2em;
+}
+
+/* Section titles (H2) */
+.section-title {
+    color: #2980b9;
+    font-weight: 600;
+    border-left: 8px solid #3498db;
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+/* Style category headings (H3) */
+.style-category, .landmark {
+    color: #27ae60;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+/* Individual style names (H4) */
+.style-name, .future-topic, .other-landmark {
+    color: #e67e22;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Unique ID for Victorian style */
+#victorian {
+    color: #8e44ad;
+    border-bottom: 2px dashed #8e44ad;
+}
+
+/* Unique ID for Colonial style */
+#colonial {
+    color: #d35400;
+    border-bottom: 2px dotted #d35400;
+}
+
+/* Unique ID for Minimalist style */
+#minimalist {
+    color: #7f8c8d;
+    text-shadow: 1px 1px 0 #bdc3c7;
+}
+
+/* Unique ID for Sustainable style */
+#sustainable {
+    color: #2ecc71;
+    background-color: #e8f8f5;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+/* Famous house headings */
+#white-house {
+    color: #b7950b;
+    font-family: 'Times New Roman', serif;
+}
+
+#fallingwater {
+    color: #1abc9c;
+    font-family: 'Courier New', monospace;
+}
+
+/* Paragraph styling using class */
+.house-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 15px 0;
+}
+
+/* Individual paragraph IDs for extra flair */
+#p1 {
+    background-color: #fef9e7;
+    border-left: 6px solid #f1c40f;
+}
+#p2 {
+    background-color: #e8f8f5;
+    border-left: 6px solid #1abc9c;
+}
+#p3 {
+    background-color: #f4ecf7;
+    border-left: 6px solid #9b59b6;
+}
+#p4 {
+    background-color: #d5f5e3;
+    border-left: 6px solid #2ecc71;
+}
+#p5 {
+    background-color: #fadbd8;
+    border-left: 6px solid #e74c3c;
+}
+#p6 {
+    background-color: #d6eaf8;
+    border-left: 6px solid #3498db;
+}
+#p7 {
+    background-color: #fcf3cf;
+    border-left: 6px solid #f7dc6f;
+}
+#p8 {
+    background-color: #d0ece2;
+    border-left: 6px solid #16a085;
+}
+#p9 {
+    background-color: #f2d7d5;
+    border-left: 6px solid #c0392b;
+}
