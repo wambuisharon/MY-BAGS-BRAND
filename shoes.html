@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bag Collection</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        .internal {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 200px;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .internal-img {
+            border: 3px solid orange;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 style="color: darkblue;">My Bag Collection</h1>
+
+    <!-- Paragraphs -->
+    <p style="color: blue; font-style: italic;">Paragraph 1 (Inline CSS)</p>
+    <p class="internal">Paragraph 2 (Internal CSS)</p>
+    <p class="external">Paragraph 3 (External CSS)</p>
+
+    <!-- Headings -->
+    <h1 style="color: green;">Highlight 1 (Inline CSS)</h1>
+    <h1 class="internal">Highlight 2 (Internal CSS)</h1>
+    <h1 class="external">Highlight 3 (External CSS)</h1>
+
+    <!-- Buildings -->
+    <h3 style="color: purple;">Building 1 (Inline CSS)</h3>
+    <h3 class="internal">Building 2 (Internal CSS)</h3>
+    <h3 class="external">Building 3 (External CSS)</h3>
+
+    <!-- Image Containers -->
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3" width="150">
+        <p>Bag 1</p>
+    </div>
+
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7" width="150" class="internal-img">
+        <p>Bag 2</p>
+    </div>
+
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba7" width="150">
+        <p>Bag 3</p>
+    </div>
+
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1593032465171-8b3d5b67a5d2" width="150">
+        <p>Bag 4</p>
+    </div>
+
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990" width="150">
+        <p>Bag 5</p>
+    </div>
+
+</body>
+</html>
+.external {
+    color: purple;
+    text-decoration: underline;
+}
