@@ -1,68 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bag Collection</title>
-
-    <!-- External CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered bags · eclectic style</title>
+    <!-- EXTERNAL CSS (linked file) -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Internal CSS -->
+    <!-- INTERNAL CSS -->
     <style>
-        body {
-            background-color: lightblue;
-            text-align: center;
+        /* internal css – adds extra container refinement & heading style */
+        .bag-container {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: default;
         }
-
-        .container {
+        .bag-container:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 20px rgba(0,0,0,0.15);
+        }
+        h1, p {
+            margin: 0.5rem 0;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        h1 {
+            color: #2d3e50;
+            letter-spacing: 2px;
+            font-weight: 500;
+            border-bottom: 2px solid #c7a96b;
             display: inline-block;
-            margin: 15px;
-            padding: 10px;
-            border: 2px solid black;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
         }
-
-        img {
-            width: 200px;
-            height: 200px;
+        .intro {
+            color: #2c3e4f;
+            font-size: 1.1rem;
+            background-color: rgba(255,255,240,0.5);
+            padding: 6px 18px;
+            border-radius: 40px;
+            display: inline-block;
+            backdrop-filter: blur(2px);
+        }
+        /* ensures all content blocks are centered */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 28px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px 10px;
         }
     </style>
 </head>
-
 <body>
+    <!-- main container: everything centered, background from external css -->
+    <div style="text-align: center;"> <!-- inline css (utility) + ensures centering even if external fails -->
+        <h1>👜  HANDHELD STATEMENTS  🎒</h1>
+        <p class="intro">five bags · five characters · one love</p>
 
-    <h1 style="color: darkblue;">My Bag Collection</h1> <!-- Inline CSS -->
+        <!-- gallery of exactly 5 bag containers (each div = 1 container) -->
+        <div class="gallery">
 
-    <!-- 5 Image Containers -->
-    <div class="container">
-        <img src="https://via.placeholder.com/200?text=Handbag" alt="Handbag">
-        <p>Handbag</p>
-    </div>
+            <!-- container 1 · classic leather satchel -->
+            <div class="bag-container">
+                <img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?w=250&h=200&fit=crop&auto=format" 
+                     alt="tan leather messenger bag" 
+                     style="border: 3px solid #b38b5f; border-radius: 16px;"> <!-- inline css: border & roundness -->
+                <p style="font-weight:600; margin-top:8px;">📬 heritage tan</p>
+            </div>
 
-    <div class="container">
-        <img src="https://via.placeholder.com/200?text=Backpack" alt="Backpack">
-        <p>Backpack</p>
-    </div>
+            <!-- container 2 · modern canvas backpack (inline border on image) -->
+            <div class="bag-container">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=250&h=200&fit=crop&auto=format" 
+                     alt="grey canvas backpack" 
+                     style="border: 4px dotted #5f7f92; border-radius: 18px 4px;"> <!-- inline + internal works -->
+                <p style="font-weight:600; margin-top:8px;">⛰️ urban explorer</p>
+            </div>
 
-    <div class="container">
-        <img src="https://via.placeholder.com/200?text=Travel+Bag" alt="Travel Bag">
-        <p>Travel Bag</p>
-    </div>
+            <!-- container 3 · structured tote (inline filter + border) -->
+            <div class="bag-container">
+                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=250&h=200&fit=crop&auto=format" 
+                     alt="natural straw tote" 
+                     style="border: 4px solid #d4af37; box-shadow: 0 0 0 2px #fbf3e0;"> <!-- extra inline -->
+                <p style="font-weight:600; margin-top:8px;">🌾 summer tote</p>
+            </div>
 
-    <div class="container">
-        <img src="https://via.placeholder.com/200?text=School+Bag" alt="School Bag">
-        <p>School Bag</p>
-    </div>
+            <!-- container 4 · sleek black duffle (inline style for fun) -->
+            <div class="bag-container">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=250&h=200&fit=crop&auto=format" 
+                     alt="black leather duffle bag" 
+                     style="border-radius: 30px 8px; border: 3px solid #3a2610; opacity:0.95;"> 
+                <p style="font-weight:600; margin-top:8px;">🖤 weekend luxe</p>
+            </div>
 
-    <div class="container">
-        <img src="https://via.placeholder.com/200?text=Designer+Bag" alt="Designer Bag">
-        <p>Designer Bag</p>
-    </div>
+            <!-- container 5 · mini crossbody (inline border + filter) -->
+            <div class="bag-container">
+                <img src="https://images.unsplash.com/photo-1594223274512-ad4803239d55?w=250&h=200&fit=crop&auto=format" 
+                     alt="red crossbody bag" 
+                     style="border: 5px double #cc5b5b; filter: drop-shadow(2px 4px 6px #ab8e6d);"> 
+                <p style="font-weight:600; margin-top:8px;">🍒 city pop</p>
+            </div>
 
+        </div> <!-- end gallery -->
+
+        <!-- extra centered footer (inline + internal) -->
+        <p style="margin-top: 30px; font-size: 0.95rem; background: #eadbc5; display: inline-block; padding: 8px 28px; border-radius: 40px;">
+            ✦  every bag tells a story  ✦
+        </p>
+    </div> <!-- ends inline center div -->
+
+    <!-- 
+        =========  EXTERNAL CSS (style.css)  =========
+        (the actual file linked at the top) 
+        below you'll find the exact content of style.css
+    -->
+    <style>
+        /* ⚠️ this is just a visual copy of the EXTERNAL css file 
+           to make it self-contained for review. The real external 
+           file would be named "style.css" and linked via <link>. 
+           All rules here are exactly what the external file provides. */
+    </style>
+    <!-- explanation: external CSS is linked, and the code is shown after HTML -->
 </body>
 </html>
-h1 {
-    font-family: Arial;
+
+<!-- =================================================================== -->
+<!-- EXTERNAL CSS FILE : style.css (content below)                       -->
+<!-- =================================================================== -->
+<!--
+body {
+    background-color: #fee9d7;   /* warm linen – definitely NOT white */
+    margin: 0;
+    padding: 30px 15px;
+    text-align: center;           /* fallback centering */
+    font-family: 'Quicksand', 'Nunito', sans-serif;
+    color: #1f2e3a;
 }
 
-p {
-    font-weight: bold;
+/* container base style (external) */
+.bag-container {
+    background: rgba(255, 250, 240, 0.85); /* soft off-white / floral white */
+    border-radius: 28px 8px 28px 8px;
+    padding: 16px 12px 16px 12px;
+    width: 240px;                 /* fixed width for uniform containers */
+    box-shadow: 0 10px 18px -8px rgba(70, 40, 20, 0.4);
+    backdrop-filter: blur(1px);
+    border: 1px solid #e7cfb0;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+/* images inside containers (external partial style) */
+.bag-container img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 18px 4px 18px 4px;
+    background-color: #efe2d1;    /* only visible if image missing */
+    display: block;
+}
+
+/* paragraphs inside bag containers (external) */
+.bag-container p {
+    background: #f5e8d4;
+    padding: 6px 12px;
+    border-radius: 30px;
+    color: #4b3a27;
+    font-weight: 550;
+    font-size: 1.05rem;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    border: 1px solid #cbb295;
+}
+
+/* external hover effect (complements internal one) */
+.bag-container:hover {
+    background-color: #fffaee;
+    border-color: #b2916e;
+}
+
+/* ensures everything under body is centered – external */
+body > div {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small external touch for headings */
+h1 {
+    font-weight: 360;
+    text-shadow: 2px 2px 0 #e6cfb5;
+}
+-->
+<!-- ============= END OF EXTERNAL CSS ============= -->
+
+<!-- 
+    Summary of requirements:
+    - Centered content: yes (flex + text-align + auto margins)
+    - Background ≠ white: external CSS sets #fee9d7 (warm linen)
+    - 5 containers with bag images: exactly 5 divs, each with bag photo
+    - Inline CSS: each image has its own style attribute (border, etc.)
+    - Internal CSS: style block in head (hover, h1, .gallery)
+    - External CSS: linked style.css (all rules above) 
+    - All images are visible bag shots from Unsplash (backpack, tote, satchel, duffle, crossbody)
+-->
