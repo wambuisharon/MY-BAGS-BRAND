@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Best Perfumes 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<!-- Navigation -->
+<div class="nav">
+<button>Home</button>
+<button>Contacts</button>
+<button>About</button>
+<button>Testimonials</button>
+</div>
+
+<!-- Search Box -->
+<div class="search">
+<input type="text" placeholder="Search perfume...">
+</div>
+
+<!-- Headings -->
+<h1 id="main-title">Best Perfumes 2026</h1>
+<h2 class="subtitle">Discover Amazing Fragrances</h2>
+<h3 class="section-title">Why Perfume Matters</h3>
+<h4 class="small-title">Top Trending Scents</h4>
+
+<!-- Paragraphs -->
+<p class="text">Perfume is an important part of personal style and expression. A good fragrance leaves a lasting impression and boosts confidence.</p>
+
+<p class="text">Many people choose perfumes depending on the occasion, season, or mood. Floral, woody, and fruity scents are some of the most popular categories.</p>
+
+<p class="text">Luxury brands create fragrances using rare ingredients to produce unique and memorable scents loved around the world.</p>
+
+<p class="text">Perfumes also make great gifts for friends and family. Choosing the right scent can make a person feel special.</p>
+
+<p class="text">Modern perfume brands focus on both elegance and long-lasting fragrance to satisfy their customers.</p>
+
+<p class="text">Below are some examples of popular perfumes that are trending in 2026.</p>
+
+<!-- Images -->
+<div class="images">
+
+<img src="https://images.unsplash.com/photo-1594035910387-fea47794261f">
+<img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75">
+<img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de">
+<img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d">
+<img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd">
+<img src="https://images.unsplash.com/photo-1615634260167-2b67c1a58e53">
+
+</div>
+
+</div>
+
+</body>
+</html>
+body{
+background-color: lavender;
+font-family: Arial;
+text-align: center;
+}
+
+#container{
+width: 80%;
+margin: auto;
+}
+
+.nav button{
+padding:10px 20px;
+margin:10px;
+background-color: purple;
+color:white;
+border:none;
+border-radius:5px;
+}
+
+.search input{
+width:300px;
+padding:10px;
+margin:20px;
+}
+
+#main-title{
+color:darkblue;
+}
+
+.subtitle{
+color:purple;
+}
+
+.section-title{
+color:darkgreen;
+}
+
+.small-title{
+color:brown;
+}
+
+.text{
+font-size:16px;
+margin:10px 0;
+}
+
+.images{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+}
+
+.images img{
+width:150px;
+height:150px;
+border-radius:10px;
+}
