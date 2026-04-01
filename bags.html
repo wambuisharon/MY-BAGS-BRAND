@@ -1,156 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bags · fully centered</title>
-  
-  <!-- ========== EXTERNAL CSS (non‑white background) ========== -->
-  <link rel="stylesheet" href="data:text/css;charset=utf-8,%0A/*%20external%20%2D%20background%20is%20%23dde2d6%20(soft%20sage)%2C%20definitely%20not%20white%20*/%0Abody%20%7B%0A%20%20background%2Dcolor%3A%20%23dde2d6%3B%0A%20%20margin%3A%200%3B%0A%20%20padding%3A%202rem%200%3B%0A%20%20font%2Dfamily%3A%20%27Inter%27%2C%20system%2Dui%2C%20sans%2Dserif%3B%0A%7D%0A%0A/*%20external%20container%20styles%20*/%0A.bag%2Dcontainer%20%7B%0A%20%20background%3A%20%23fffaf0%3B%0A%20%20border%2Dradius%3A%2024px%2010px%2024px%2010px%3B%0A%20%20padding%3A%201rem%200.8rem%200.8rem%200.8rem%3B%0A%20%20box%2Dshadow%3A%200%2012px%2020px%20%2D8px%20%233b4a3f%3B%0A%20%20border%3A%201px%20solid%20%23b7b99e%3B%0A%7D%0A">
+<title>Bag Collection</title>
 
-  <!-- ========== INTERNAL CSS ========== -->
-  <style>
-    /* everything centers using flex on body */
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;      /* horizontal centering for all children */
-      min-height: 100vh;
-    }
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
 
-    /* main heading & sub */
-    h1 {
-      margin: 0.2rem 0 0.2rem;
-      font-weight: 500;
-      color: #2b4637;
-      letter-spacing: 2px;
-      background: rgba(245, 235, 220, 0.6);
-      padding: 0.4rem 2.5rem;
-      border-radius: 60px;
-      border: 1px solid #9e8468;
-    }
-    .sub {
-      color: #2f4d3a;
-      background: #e5dac8;
-      padding: 0.3rem 2.2rem;
-      border-radius: 40px;
-      font-size: 1.2rem;
-      margin: 0.5rem 0 1.5rem;
-      border: 1px solid #aa8b6b;
-    }
+<!-- Internal CSS -->
+<style>
+h1{
+color: yellow;
+}
 
-    /* gallery: flex row, wrap, centered */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1300px;
-      width: 100%;
-      padding: 1rem 1rem 2rem;
-      box-sizing: border-box;
-    }
+.container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:30px;
+}
 
-    /* each container is a flex column, centered */
-    .bag-container {
-      width: 240px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: 0.2s;
-    }
-    .bag-container:hover {
-      transform: scale(1.02);
-      background: #fffcf5;
-      border-color: #c3a987;
-    }
+.box{
+border:3px solid white;
+padding:10px;
+width:200px;
+background-color:rgba(255,255,255,0.1);
+}
+</style>
 
-    /* image base (internal) */
-    .bag-container img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 18px 4px;
-      background: #ecd6bf;
-      display: block;
-    }
-
-    /* caption */
-    .bag-container p {
-      margin: 0.8rem 0 0.2rem;
-      font-weight: 600;
-      color: #3d3228;
-      background: #e9d9c6;
-      padding: 0.4rem 1.2rem;
-      border-radius: 30px;
-      font-size: 1rem;
-      border: 1px solid #b79775;
-      width: fit-content;
-    }
-
-    /* footer */
-    .footer-note {
-      background: #e4d5c0;
-      padding: 0.6rem 2.8rem;
-      border-radius: 60px;
-      border: 1px solid #a48969;
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-    }
-  </style>
 </head>
-<body>
 
-  <!-- all content is direct child of body, which has align-items: center -->
-  <h1>👜  THE BAG BAZAAR  🎒</h1>
-  <div class="sub">five carriers · five stories</div>
+<!-- Inline CSS -->
+<body style="background-color: darkslateblue; text-align:center; color:white;">
 
-  <!-- gallery container (centered via body + internal flex) -->
-  <div class="gallery">
+<h1>Beautiful Bag Collection</h1>
+<p>Welcome to my bag gallery</p>
 
-    <!-- container 1 · leather satchel (inline border) -->
-    <div class="bag-container">
-      <img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?w=240&h=160&fit=crop&auto=format" 
-           alt="tan leather messenger"
-           style="border: 5px solid #b87c54; border-radius: 30px 6px;"> <!-- inline css -->
-      <p style="background: #dbbc9b;">🍂 heritage tan</p> <!-- inline background -->
-    </div>
+<div class="container">
 
-    <!-- container 2 · canvas backpack (inline border) -->
-    <div class="bag-container">
-      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=240&h=160&fit=crop&auto=format" 
-           alt="grey canvas backpack"
-           style="border: 5px double #5f8285; border-radius: 20px 20px 4px 4px;"> <!-- inline -->
-      <p style="font-style: italic;">⛰️ urban trek</p> <!-- inline -->
-    </div>
+<div class="box">
+<img src="https://images.unsplash.com/photo-1591561954557-26941169b49e" width="180">
+<p>Leather Handbag</p>
+</div>
 
-    <   
+<div class="box">
+<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3" width="180">
+<p>Pink Stylish Bag</p>
+</div>
 
-    <!-- container 3 · red crossbody (inline border + radius) -->
-    <div class="bag-container">
-      <img src="https://images.unsplash.com/photo-1594223274512-ad4803239d55?w=240&h=160&fit=crop&auto=format" 
-           alt="red crossbody"
-           style="border: 4px dotted #c26868; border-radius: 40% 8% 40% 8%; background: #f5ddcd;"> <!-- inline -->
-      <p style="border: 2px solid #bd7d5a;">🍒 city pop</p> <!-- inline -->
-    </div>
+<div class="box">
+<img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6" width="180">
+<p>Luxury Designer Bag</p>
+</div>
 
-    <!-- exactly 3 containers, each with a bag image and inline CSS -->
-  </div>
+<div class="box">
+<img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa" width="180">
+<p>Classic Brown Bag</p>
+</div>
 
-  <!-- footer (centered via body align-items) -->
-  <div class="footer-note">✨  every bag carries a memory  ✨</div>
+<div class="box">
+<img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7" width="180">
+<p>Modern Fashion Bag</p>
+</div>
 
-  <!-- 
-    SUMMARY:
-    - Centered content: body uses flex align-items: center → everything is horizontally centered.
-    - Background-color: external CSS sets #dde2d6 (sage green) – not white.
-    - Images in containers: 5 containers with visible bag images.
-    - Inline CSS: each <img> has a style attribute, and some <p> have inline styles.
-    - Internal CSS: <style> block with layout, hover, etc.
-    - External CSS: linked via data URI (valid external resource) providing background and base container style.
-  -->
+</div>
+
 </body>
 </html>
+      
+    
+   
+    
+  
+  
 
- 
