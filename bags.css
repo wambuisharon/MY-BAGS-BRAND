@@ -1,0 +1,13 @@
+p{
+font-size:18px;
+font-weight:bold;
+}
+
+img{
+border-radius:10px;
+}
+
+.box:hover{
+transform:scale(1.05);
+transition:0.3s;
+}
